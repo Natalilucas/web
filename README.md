@@ -1,2 +1,3 @@
-# web
-repo for web class
+# html
+ html
+#### This project is personal ###
