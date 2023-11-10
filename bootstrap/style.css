@@ -1,3 +1,8 @@
+*{
+    font-family: sans-serif;
+}
+
+
 .imagesCarrosel {
 width: 850px;
 }
@@ -11,10 +16,10 @@ width: 850px;
     margin-top: 50px;
 }
 
-.contatoEmail h1{
+h1{
     color: white;
     line-height: 50px;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .contatoEmail h3{
@@ -23,9 +28,45 @@ width: 850px;
     margin-bottom: 20px;
     text-align: center;
 }
+p{
+    color: white;
+
+}
 
 .accordionPerguntas{
-    background-color: brown;
     height: 100px;
     align-items: center;
+}
+
+.devices{
+    background-color: black;
+    flex-direction: row;
+    align-items: center;
+}
+
+.frase1{
+    margin: auto;
+    max-width: calc( 100% - 3rem );
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+}
+
+footer{
+    color: azure;
+    background-color: black;
+    
+}
+a{
+    text-decoration: none;
+    color: white;
 }
