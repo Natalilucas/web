@@ -1,0 +1,31 @@
+.imagesCarrosel {
+width: 850px;
+}
+
+.contatoEmail{
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    margin-top: 50px;
+}
+
+.contatoEmail h1{
+    color: white;
+    line-height: 50px;
+    font-weight: 500;
+}
+
+.contatoEmail h3{
+    color: white;
+    font-weight: 400;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.accordionPerguntas{
+    background-color: brown;
+    height: 100px;
+    align-items: center;
+}
