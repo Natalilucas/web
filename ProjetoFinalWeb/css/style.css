@@ -9,13 +9,74 @@ body{
     background-color: #BF8B78;
 }
 
-a{
+.navbar-nav .nav-item .nav-link{
     text-decoration: none;
-    color: #260101;
+    color: #240131;
     font-family: 'Caveat', cursive;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    font-size: 17px;
 
+}
+
+li{
+    list-style-type: none;
 }
 
 .navAna{
+    display: flex;
+    justify-content: center;
     text-align: center;
 }
+
+.logBank{
+    width: 10%;
+}
+
+.carousel{
+    padding-top: 4%;
+    margin: auto;
+    width: 60%;
+}
+
+#intro {
+    position: relative; /* Para que a posição da legenda(txt_ilustracao), dependa das dimensões de #intro */
+    float: left; /* Para se ajustar às dimensões da img */
+}
+
+.boxMoldura {
+    width:38%;
+    background-color: rgba(255, 255, 255, 0.6);
+    position: absolute; /* Para flutuar por cima da div#intro e tê-la como referência para 'caminharmos' pelos eixos x e y */
+    text-align: center;
+    padding: 20px;
+    right: 30px; /* Alinha o box à direita com uma distância de 30px do limite da div#intro */
+    top: 50%; /* Coloca o box na posição 0 do eixo y da div#intro */
+    margin-top: -100%; /* Recua 25% da altura para que o box fique centralizado no eixo y da div#intro. Independente da altura da imagem ou do box de legenda, o elemento sempre estará centralizado no eixo y. */
+    z-index:2;
+}
+
+.cliente6{
+    width: 26vw;
+    height: 40vh;
+    z-index: 1;
+}
+
+
+#footer-bottom .linhas :after :before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 45%;
+    height: 12px;
+    background-size: contain;
+    background-image: url(../images/linhas@2x.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    top: 12px;
+    right: -40px;
+
+}
+
+
