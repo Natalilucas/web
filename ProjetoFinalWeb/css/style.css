@@ -77,6 +77,28 @@ li{
     top: 12px;
     right: -40px;
 
+    font-size: x-large;
+
+}
+
+nav ul li{
+    display: inline;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.anaLogo{
+    width: 10%;
+}   
+
+.anaBar{
+    text-align: center;
+}
+
+a:hover{
+    background-color: rgba(207, 170, 78, 0.588);
 }
 
 
