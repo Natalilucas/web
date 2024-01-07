@@ -1,104 +1,497 @@
-* {
-    box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap');
+
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
-    
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
-body{
-    background-color: #BF8B78;
-}
-
-.navbar-nav .nav-item .nav-link{
-    text-decoration: none;
-    color: #240131;
-    font-family: 'Caveat', cursive;
-    font-weight: bold;
-    position: relative;
-    display: inline-block;
-    font-size: 17px;
-
-}
-
-li{
-    list-style-type: none;
-}
-
-.navAna{
+.main-avaliacao {
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+}
+
+
+
+.mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+    opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+
+
+.header-nav-bar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: background-color .5s ease;
+    z-index: 10;
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1);
+  }
+  
+  .header-nav-bar.scrolling-active {
+    background-color: #fff;
+    box-shadow: 0 2px 5px #ccc;
+  }
+
+.container {
+    width: 100%;
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.nav {
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #C0576F;
+    transition: height .5s ease;
+}
+
+
+
+.nav a {
+    text-decoration: none;
+    color: #C0576F;
+    font-size: 1.6rem;
+}
+
+nav a:hover,
+a:active {
+    color: white;
+}
+
+.nav .logo1 img {
+    height: 10vh;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    margin-right: auto;
+    margin-left: 13rem;
+}
+
+.nav-link {
+    margin: 0 2rem;
+    position: relative;
+
+}
+
+.nav-link::after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    text-decoration: none;
+    background-color: #FFBD83;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: .5s ease;
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1);
+}
+
+.principal {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    padding-top: 20vh;
+    padding-bottom: 4vh;
+    flex-direction: column;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+.fa-heart {
+    color: red;
+    margin-right: 5px;
+}
+
+
+
+.search-box {
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+}
+
+.input-search {
+    height: 50px;
+    width: 50px;
+    border-style: none;
+    padding: 10px;
+    letter-spacing: 2px;
+    outline: none;
+    border-radius: 25px;
+    transition: all .5s ease-in-out;
+    background-color: #C0576F;
+    padding-right: 40px;
+    color: rgb(0, 0, 0);
+}
+
+.input-search::placeholder {
+    color: #C0576F;
+    letter-spacing: 2px;
+    font-weight: 100;
+}
+
+.btn-search {
+    width: 50px;
+    height: 50px;
+    border-style: none;
+    font-size: 20px;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    right: 0px;
+    color: #ffffff;
+    background-color: transparent;
+    pointer-events: painted;
+}
+
+.btn-search:focus~.input-search {
+    width: 210px;
+    border-radius: 0px;
+    background-color: transparent;
+    border-bottom: 1px solid #C0576F;
+    transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+
+.input-search:focus {
+    width: 200px;
+    border-radius: 0px;
+    background-color: transparent;
+    border-bottom: 1px solid #C0576F;
+    transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+
+
+
+
+
+.btn {
+    border: none;
+    border-radius: 8px;
+    display: flex;
     text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    outline: none;
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+    font-weight: 700;
+    font-size: 15px;
+    background-color: #222;
+    padding: 17px 60px;
+    margin: 0 auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.20);
+
 }
 
-.logBank{
-    width: 10%;
-}
-
-.carousel{
-    padding-top: 4%;
-    margin: auto;
-    width: 60%;
-}
-
-#intro {
-    position: relative; /* Para que a posição da legenda(txt_ilustracao), dependa das dimensões de #intro */
-    float: left; /* Para se ajustar às dimensões da img */
-}
-
-.boxMoldura {
-    width:38%;
-    background-color: rgba(255, 255, 255, 0.6);
-    position: absolute; /* Para flutuar por cima da div#intro e tê-la como referência para 'caminharmos' pelos eixos x e y */
-    text-align: center;
-    padding: 20px;
-    right: 30px; /* Alinha o box à direita com uma distância de 30px do limite da div#intro */
-    top: 50%; /* Coloca o box na posição 0 do eixo y da div#intro */
-    margin-top: -100%; /* Recua 25% da altura para que o box fique centralizado no eixo y da div#intro. Independente da altura da imagem ou do box de legenda, o elemento sempre estará centralizado no eixo y. */
-    z-index:2;
-}
-
-.cliente6{
-    width: 26vw;
-    height: 40vh;
+.btn span {
+    position: relative;
     z-index: 1;
 }
 
-
-#footer-bottom .linhas :after :before{
-    content: '';
-    display: block;
+.btn:after {
+    content: "";
     position: absolute;
-    width: 45%;
-    height: 12px;
-    background-size: contain;
-    background-image: url(../images/linhas@2x.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    top: 12px;
-    right: -40px;
-
-    font-size: x-large;
-
+    left: 0;
+    top: 0;
+    height: 490%;
+    width: 140%;
+    background: #C0576F;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+    transform: translateX(-98%) translateY(-25%) rotate(45deg);
 }
 
-nav ul li{
-    display: inline;
-    flex-direction: row;
-    text-align: center;
+.btn:hover:after {
+    -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+    transform: translateX(-9%) translateY(-25%) rotate(45deg);
+}
+
+
+.corpo-cadastro {
+    background-size: cover;
+    height: 115vh;
+    display: flex;
     align-items: center;
-    margin-right: 20px;
+    justify-content: center;
+    padding-right: auto;
 }
 
-.anaLogo{
-    width: 10%;
-}   
+.lista-servicos {
+    display: flex;
+    padding: 48px;
+    gap: 32px;
+}
 
-.anaBar{
+.titulo-principal {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.img-principal,
+.imagem2-principal {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+div.divisao-flex2 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+figure {
     text-align: center;
 }
 
-a:hover{
-    background-color: rgba(207, 170, 78, 0.588);
+figcaption {
+    font-size: 1rem;
+}
+
+.secaop-principal1 {
+    max-width: 600px;
+
+}
+
+.card-servicos {
+    background-color: #eae9ef;
+    border-radius: 40px;
+    color: #000000;
+    border: 2px solid #D6D4E2;
+}
+
+.card-servicos img {
+    max-width: 500px;
+    height: auto;
+    border-radius: 39px 39px 0 0
+}
+
+.card-servicos p {
+    font-size: 14px;
+    line-height: normal;
+    color: #757271;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.card-servicos {
+    padding: 20px;
+}
+
+.card-servicos h3 {
+    font-size: 24px;
+    color: #E38679;
+    font-weight: 600;
 }
 
 
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    background-color: #f0f0f0;
+}
+
+.images-logo {
+    order: 1;
+}
+
+.images-logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.imagens-redes {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.copy {
+    text-align: center;
+    margin-top: 10px;
+    width: 100%;
+}
+
+
+
+.formulario-cadastro {
+    padding: 30px 50px;
+    background: #fff;
+    box-shadow: 0 15px 50px #C0576F;
+    width: 30vw;
+    height: 85vh;
+    position: relative;
+    margin: 0 auto;
+    top: 150px;
+    border-radius: 15px;
+}
+
+.formulario-cadastro h3 {
+    color: #111;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.formulario-cadastro .inputBox {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.formulario-cadastro .inputBox input,
+.formulario-cadastro .inputBox textarea {
+    width: 100%;
+    border: 1px solid #555;
+    padding: 10px;
+    color: #C0576F;
+    outline: none;
+    font-size: 16px;
+    font-weight: 300;
+    resize: none;
+}
+
+.formulario-cadastro .inputBox p {
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.last-p {
+    text-align: center;
+}
+
+.formulario-cadastro .inputBox input[type="submit"] {
+    font-size: 1em;
+    color: #fff;
+    background: #C0576F;
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    max-width: 100px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+}
+
+.imagem-link {
+    position: relative;
+}
+
+.imagem-link a {
+    display: block;
+}
+
+.imagem-link figcaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: opacity 0.3s ease;
+}
+
+.imagem-link:hover figcaption {
+    opacity: 1;
+}
+
+iframe {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.video-container {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px;
+    background-color: #f8f8f8;
+    padding: 15px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.overlay:hover {
+    display: none;
+}

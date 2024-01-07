@@ -15,38 +15,114 @@
     <link rel="stylesheet" href="./css/style.css"></head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&display=swap" rel="stylesheet">      
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
+  </head>    
 <body>
-    <nav>
-       <div class="navAna">
-        <img src="./imagens/logoBak.png" alt="" srcset="">
-       </div> 
-       <div>
-        
-        <nav class="navbar navbar-expand-lg navbar">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav">
-                <li class="nav-item active">
-                  <a class="nav-link" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Clientes</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/Tarifario.html">Preços</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link disabled" href="/contato.html">Contato</a>
-                </li>
-              </ul>
-            </div>
-          </nav>
-       </div>
-    </nav>
+  <header class="header-nav-bar">
+    <div class="container container-fluid">
+      <nav class="nav navbar-expand-lg">
+        <a href="index.html" class="logo1"><img src="./imagens/logoBak.png" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        <ul class="nav-list">
+          <li>
+            <a class="nav-link" href="./index.html">Home </a>
+          </li>
+          <li>
+            <a class="nav-link" href="/Tarifario.html">Preços</a>
+          </li>
+          <li>
+            <a class="nav-link" href="/contato.html">Contato</a>
+          </li>
+
+        </ul>
+        <div class="search-box">
+          <button class="btn-search"><i class="fas fa-search"></i></button>
+          <input type="text" class="input-search" placeholder="Digite para pesquisar...">
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="principal">
+    <div class="container mt-5">
+      <h2 class="text-center mb-4">Preços de Serviços</h2>
+    
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Serviço</th>
+            <th scope="col">Descrição</th>
+            <th scope="col">Preço</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Serviço 1</td>
+            <td>Descrição do Serviço 1</td>
+            <td>R$ 100,00</td>
+          </tr>
+          <tr>
+            <td>Serviço 2</td>
+            <td>Descrição do Serviço 2</td>
+            <td>R$ 150,00</td>
+          </tr>
+          <tr>
+            <td>Serviço 3</td>
+            <td>Descrição do Serviço 3</td>
+            <td>R$ 200,00</td>
+          </tr>
+          <tr>
+            <td>Serviço 4</td>
+            <td>Descrição do Serviço 3</td>
+            <td>R$ 100,00</td>
+          </tr>
+
+          <tr>
+            <td>Serviço 5</td>
+            <td>Descrição do Serviço 3</td>
+            <td>R$ 300,00</td>
+          </tr>
+          <tr>
+            <td>Serviço 6</td>
+            <td>Descrição do Serviço 3</td>
+            <td>R$ 250,00</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="video-container">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/UsvL3AN36qM?si=8Qx6XV8B3L9DFj2G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <div class="overlay"></div>
+    </div>
+    
+  </main>
+
+  <footer class="footer" >
+    <section class="images-logo">
+      <img src="imagens/logoBak.png" alt="logo-rodape" width="150px">
+    </section>
+    <section class="imagens-redes">
+      <a href="https://www.instagram.com/ana_lucas_mendes/" target="_blank"><img src="./imagens/icons8-instagram.svg"
+          alt="instagram" width="50px" height="50px"> </a>
+      <a href="https://linktr.ee/StudioALM" target="_blank"><img src="./imagens/icons8-whatsapp.svg" alt="whatsapp"
+          width="50px" height="50px"></a>
+    </section>
+    <div class="copy">
+      <p>© Ana Lucia Mendes - 2024</p>
+      <p><a href="./nataliAvaliacao.html">By Natali Lucas</a> </p>
+    </div>
+  </footer>
+
+  <script src="./javascript/script.js"></script>
     
 </body>
 </html>

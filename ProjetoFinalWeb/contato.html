@@ -1,45 +1,135 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
-    <title>Ana Mendes Studio</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicon_package_v0.16/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon_package_v0.16/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" href="./css/style.css"></head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&display=swap" rel="stylesheet">      
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+  <title>Ana Mendes Studio</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon_package_v0.16/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon_package_v0.16/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+  integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+  integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+
 <body>
-    <nav class="anaBar">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link" href="#">HOME</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">CLIENTES</a>
-                </li>
-                <li>
-                  <img class="anaLogo" src="./imagens/logoBak.png" alt="" srcset="">
-                </li> 
-                <li class="nav-item">
-                  <a class="nav-link" href="/Tarifario.html">PREÇOS</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link disabled" href="/contato.html">CONTATO</a>
-                </li>
-              </ul>
-            </div>
-          </nav>
-    </nav>
-    
+
+
+  
+  <header class="header-nav-bar">
+    <div class="container container-fluid">
+      <nav class="nav navbar-expand-lg">
+        <a href="index.html" class="logo1"><img src="./imagens/logoBak.png" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        <ul class="nav-list">
+          <li>
+            <a class="nav-link" href="./index.html">Home </a>
+          </li>
+          <li>
+            <a class="nav-link" href="/Tarifario.html">Preços</a>
+          </li>
+          <li>
+            <a class="nav-link" href="/contato.html">Contato</a>
+          </li>
+
+        </ul>
+        <div class="search-box">
+          <button class="btn-search"><i class="fas fa-search"></i></button>
+          <input type="text" class="input-search" placeholder="Digite para pesquisar...">
+        </div>
+      </nav>
+    </div>
+  </header>
+
+
+
+  <main class="corpo-cadastro">
+
+    <div class="col-md-6 m-4">
+      <form method="post" class="mx-auto">
+        <fieldset class="formulario-cadastro">
+          <h3>Fale Conosco</h3>
+
+          <div class="inputBox">
+            <label for="email">E-mail</label>
+            <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp"
+              placeholder="Insira seu email" required>
+          </div>
+
+          <div class="inputBox">
+            <label for="whatsapp">Whatsapp</label>
+            <input type="tel" id="whatsapp" name="whatsapp" placeholder="Insira seu Whatsapp" required>
+          </div>
+
+          <div class="inputBox">
+            <label for="assunto">Assunto</label>
+            <select name="assunto" class="select" required>
+              <option value="" disabled selected>Selecione uma opção</option>
+              <option value="Compras">Agendamento</option>
+              <option value="Financeiro">Produtos</option>
+              <option value="Duvidas">Dúvidas</option>
+              <option value="Outros">Outros Assuntos</option>
+            </select>
+          </div>
+
+          <div class="inputBox">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem" required></textarea>
+          </div>
+
+          <div class="inputBox">
+            <button type="submit" class="btn"><span>Enviar</span></button>
+            <p class="last-p">Em breve nossa equipe entrará em contato!</p>
+          </div>
+
+        </fieldset>
+      </form>
+    </div>
+
+
+  </main>
+
+
+
+
+  <footer class="footer">
+    <section class="images-logo">
+      <img src="imagens/logoBak.png" alt="logo-rodape" width="150px">
+    </section>
+    <section class="imagens-redes">
+      <a href="https://www.instagram.com/ana_lucas_mendes/" target="_blank"><img src="./imagens/icons8-instagram.svg"
+          alt="instagram" width="50px" height="50px"> </a>
+      <a href="https://linktr.ee/StudioALM" target="_blank"><img src="./imagens/icons8-whatsapp.svg" alt="whatsapp"
+          width="50px" height="50px"></a>
+    </section>
+    <div class="copy">
+      <p>© Ana Lucia Mendes - 2024</p>
+      <p><a href="./nataliAvaliacao.html">By Natali Lucas</a> </p>
+    </div>
+  </footer>
+
+  <script src="./javascript/script.js"></script>
+
 </body>
+
 </html>
